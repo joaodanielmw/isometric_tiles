@@ -14,6 +14,7 @@ typedef struct {
     SDL_Renderer *renderer;
     const bool *keyboard;
     Tiles tiles;
+    SDL_Texture *atlas;
     bool running;
 } AppState;
 

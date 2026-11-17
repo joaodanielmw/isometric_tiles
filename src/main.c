@@ -13,7 +13,7 @@ int main(int argc, char **argv){
         app_quit(&app);
         return EXIT_FAILURE;
     };
-
+    
     app_setup(&app);
 
     then = SDL_GetTicks();
@@ -24,7 +24,7 @@ int main(int argc, char **argv){
 
         while(SDL_PollEvent(&event)) 
             app_handle_events(&app, &event);
-
+        
         app_update(&app, delta_time);
         app_render(&app);
     }

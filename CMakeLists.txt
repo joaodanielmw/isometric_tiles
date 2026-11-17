@@ -8,12 +8,20 @@ add_executable(
     ${PROJECT_NAME}
     src/main.c
     src/app.c
+    src/path.c
 )
+
+add_custom_target(
+    copy_assets
+    COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_CURRENT_LIST_DIR}/assets ${CMAKE_CURRENT_BINARY_DIR}/assets
+)
+add_dependencies(${PROJECT_NAME} copy_assets)
 
 target_link_libraries(
     ${PROJECT_NAME}
     SDL3::SDL3
     SDL3_image::SDL3_image
+    m
 )
 
 target_include_directories(

@@ -1,6 +1,7 @@
 # Isometric Tiles
 
 This project is a simple isometric "game" made with C and the SDL3 library.
+Follow the changes at the [changelog](CHANGELOG.md).
 
 ## Dependencies
 - `libsdl3-dev` 
@@ -17,4 +18,4 @@ cmake --build build
 ```bash
 ./build/isometric
 ```
-![Screenshot](docs/screenshot.png)
+![Screenshot](docs/texturized.png)
